@@ -44,6 +44,10 @@ def render_to(template=None):
                 cookies = (output['COOKIES'],) if isinstance(output['COOKIES'], dict) else output['COOKIES']
                 for i in cookies:
                     response.set_cookie(**i)
+            if 'HEADERS' in output:
+                headers = output['HEADERS']
+                for header, value in headers.items():
+                    response[header] = value
             return response
 
         return wrapper
