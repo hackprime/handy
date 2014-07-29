@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
+import json
 from functools import wraps
 from datetime import datetime
 
 from django.conf import settings
 from django.template import loader, RequestContext
 from django.http import HttpResponse
-from django.utils import simplejson as json
 from django.utils.http import http_date
 
 

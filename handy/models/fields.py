@@ -4,12 +4,11 @@ try:
 except ImportError:
     import pickle
 
-import re, datetime
+import re, datetime, json
 from django.db import models
 from django import forms
 from django.core import exceptions, validators
 from django.utils.text import capfirst
-from django.utils import simplejson as json
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 
